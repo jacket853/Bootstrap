@@ -19,11 +19,31 @@
       <hr>
 
     <ul class="nav nav-pills">
-      <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
-      <li><a data-toggle="pill" href="#intro">An Intro</a></li>
-      <li><a data-toggle="pill" href="#start">Getting Started</a></li>
-      <li><a data-toggle="pill" href="#media">Media</a></li>
+      <li class="active">
+        <a data-toggle="pill" data-bs-toggle="tooltip" title="starting page thingy" href="#home">Home</a>
+      </li>
+      <li>
+        <a data-toggle="pill" data-bs-toggle="tooltip" title="the next one" href="#intro">An Intro</a>
+      </li>
+      <li>
+        <a data-toggle="pill" data-bs-toggle="tooltip" title="you're going pretty far over here" href="#start">Getting Started</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" role="button" data-bs-toggle="tooltip" title="ohwaituptheresmore" data-toggle="dropdown">Dropend</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" data-toggle="pill" data-bs-toggle="tooltip" title="this is the end..." href="#media">Media</a></li>
+          <li><a class="dropdown-item" data-toggle="pill" data-bs-toggle="tooltip" title="or is it?" href="#conclude">Wrap-Up</a></li>
+        </ul>
+      </li>
     </ul>
+
+    <script>
+    // initialize tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script>
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
@@ -42,61 +62,68 @@
           <h2>A Real Collector's MTG Card</h2>
             <p>The Black Lotus, <q>sold at auction on eBay for $511,100.</q></p>
             <div class="row">
-              <div class="col p-3 text-white"><img src="https://static.cardkingdom.com/images/magic-the-gathering/alpha/black-lotus-28010.jpg" alt="Black Lotus"></div>
-              <div class="col p-3 bg-dark text-white"><p>Here's what CBR.com (media commentary website) had to say:<br><blockquote cite="https://www.cbr.com/magic-gathering-mtg-black-lotuses-remaining/"><em>In Magic: The Gathering, there is a set of cards known as the Power Nine. These are considered to be the most powerful from M:TG's original print run, making them incredibly valuable to collectors. However, none of the Power Nine cards are as valuable as the Black Lotus card. In fact, the card's legendary status has lead to it being banned in almost every form of competitive play.</em></blockquote></p></div>
+              <div class="col-sm-4 bg-primary text-white"><img src="https://static.cardkingdom.com/images/magic-the-gathering/alpha/black-lotus-28010.jpg" alt="Black Lotus"></div>
+              <div class="col-sm-8 bg-dark text-white"><p>Here's what CBR.com (media commentary website) had to say:<br><blockquote cite="https://www.cbr.com/magic-gathering-mtg-black-lotuses-remaining/"><em>In Magic: The Gathering, there is a set of cards known as the Power Nine. These are considered to be the most powerful from M:TG's original print run, making them incredibly valuable to collectors. However, none of the Power Nine cards are as valuable as the Black Lotus card. In fact, the card's legendary status has lead to it being banned in almost every form of competitive play.</em></blockquote></p></div>
             </div>
       </div>
       <div id="start" class="tab-pane fade">
         <h2>Are You Ready to Play?</h2>
             <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
-              <dl>
-                <dt>Begin</dt>
-                  <dd>Untap lands and creatures so they may become usuable again</dd>
-                  <dd>Draw a card (must have 7 cards or less in hand)</dd>
-                <dt>Main Phase</dt>
-                  <dd>Play a land (only one per turn)</dd>
-                  <dd>Cast creatures and/or sorceries</dd>
-                <dt>Combat</dt>
-                  <dd>Declare attackers</dd>
-                  <dd>Opponent declares blockers</dd>
-                  <dd>Combat damage is dealt</dd>
-                <dt>Second Main Phase</dt>
-                  <dd>Play a land (if you haven't already)</dd>
-                  <dd>Cast creatures and/or sorceries</dd>
-                <dt>End</dt>
-                  <dd>Your creatures heal</dd>
-                  <dd>Discard any extra cards in hand</dd>
-                  <dd>Pass the turn to your opponent</dd>
-              </dl>
-            <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
-              <ol>
-                <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
-                <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
-                <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
-                <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
-              </ol>
-            <p><strong>Here's the different types of cards (called "spells")...</strong></p>
-              <ul>
-                <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
-                <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
-                <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
-              </ul>
+            <div class="row">
+              <div class="col-3 col-sm- col-md- col-lg-">
+                <dl>
+                  <dt>Begin</dt>
+                    <dd>Untap lands and creatures so they may become usuable again</dd>
+                    <dd>Draw a card (must have 7 cards or less in hand)</dd>
+                  <dt>Main Phase</dt>
+                    <dd>Play a land (only one per turn)</dd>
+                    <dd>Cast creatures and/or sorceries</dd>
+                  <dt>Combat</dt>
+                    <dd>Declare attackers</dd>
+                    <dd>Opponent declares blockers</dd>
+                    <dd>Combat damage is dealt</dd>
+                  <dt>Second Main Phase</dt>
+                    <dd>Play a land (if you haven't already)</dd>
+                    <dd>Cast creatures and/or sorceries</dd>
+                  <dt>End</dt>
+                    <dd>Your creatures heal</dd>
+                    <dd>Discard any extra cards in hand</dd>
+                    <dd>Pass the turn to your opponent</dd>
+                </dl>
+              </div>
+              <div class="col-3 col-sm- col-md- col-lg-">
+                <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
+                  <ol>
+                    <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
+                    <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
+                    <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
+                    <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
+                  </ol>
+              </div>
+              <div class="col-3 col-sm- col-md- col-lg-">
+                <p><strong>Here's the different types of cards (called "spells")...</strong></p>
+                  <ul>
+                    <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
+                    <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
+                    <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
+                  </ul>
+              </div>
+            </div>
       </div>
       <div id="media" class="tab-pane fade">
         <h2>Let's do things with Magic! ... But what?</h2>
-            <a href="#Cards">Skip the match. It's ONLY the world finals or something.<br><a>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/2dgyHsW9LtM?start=60&autoplay=1&mute=1&controls=0" title="Not boring..."></iframe>
-                <!-- have to mute embedded video or will not autoplay in chrome, firefox, or edge -->
-            <h3 id="Cards" style="color:red;">Wait! Where did that card art go?</h3>
-              <img src="https://images.saymedia-content.com/.image/t_share/MTc5MjE4MTk2NTczMDA1MzAw/blue-artwork-mtg.jpg" alt="Lunar Mystic, Human Wizard" class="rounded" class="img-fluid">
-              <img src="https://i.pinimg.com/736x/11/0a/da/110adab6c686de0f3af0ba409c8e7f08--geek-dragon.jpg" alt="Shivan Dragon, Dragon" class="rounded" class="img-fluid">
-              <img src="https://i.pinimg.com/736x/0e/e8/40/0ee84049383d152978ed63be7ecd20ab.jpg" alt="Vastwood Animist, Elf Shaman Ally" class="rounded" class="img-fluid">
-              <img src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_700/MTc4MDA3MDE0NzIxOTIyNjY0/self-reviving-black-creatures-mtg.jpg" alt="Dread Wanderer, Zombie Jackal" class="rounded" class="img-fluid">
-              <img src="https://www.trader-online.de/out/pictures/master/product/1/M20-E004.jpg" alt="Angel of Vitality, Angel" class="rounded" class="img-fluid">
-              <img src="https://d2a6pxjvsktfgo.cloudfront.net/card-images/sets/en/hou/nicol-bolas-god-pharaoh-140.jpg" alt="Nicol Bolas, God-Pharoah" class="rounded" class="img-fluid">
-              <!-- inline styling takes precedence over external, internal, or block -->
-              <img src="https://images.saymedia-content.com/.image/t_share/MTc0NDYxMDE1OTAyNDYzMzM2/best-split-spells-mtg.jpg" alt="Repudiate/Replicate, Instant/Sorcery" class="rounded" class="img-fluid" style="width:550px; height:400px;">
-        </div>
+          <a href="#Cards">Skip the match. It's ONLY the world finals or something.<br><a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2dgyHsW9LtM?start=60&autoplay=1&mute=1&controls=0" title="Not boring..."></iframe>
+              <!-- have to mute embedded video or will not autoplay in chrome, firefox, or edge -->
+          <h3 id="Cards" style="color:red;">Wait! Where did that card art go?</h3>
+            <img src="https://images.saymedia-content.com/.image/t_share/MTc5MjE4MTk2NTczMDA1MzAw/blue-artwork-mtg.jpg" alt="Lunar Mystic, Human Wizard" class="rounded" class="img-fluid">
+            <img src="https://i.pinimg.com/736x/11/0a/da/110adab6c686de0f3af0ba409c8e7f08--geek-dragon.jpg" alt="Shivan Dragon, Dragon" class="rounded" class="img-fluid">
+            <img src="https://i.pinimg.com/736x/0e/e8/40/0ee84049383d152978ed63be7ecd20ab.jpg" alt="Vastwood Animist, Elf Shaman Ally" class="rounded" class="img-fluid">
+            <img src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_700/MTc4MDA3MDE0NzIxOTIyNjY0/self-reviving-black-creatures-mtg.jpg" alt="Dread Wanderer, Zombie Jackal" class="rounded" class="img-fluid">
+            <img src="https://www.trader-online.de/out/pictures/master/product/1/M20-E004.jpg" alt="Angel of Vitality, Angel" class="rounded" class="img-fluid">
+            <img src="https://d2a6pxjvsktfgo.cloudfront.net/card-images/sets/en/hou/nicol-bolas-god-pharaoh-140.jpg" alt="Nicol Bolas, God-Pharoah" class="rounded" class="img-fluid">
+            <!-- inline styling takes precedence over external, internal, or block -->
+            <img src="https://images.saymedia-content.com/.image/t_share/MTc0NDYxMDE1OTAyNDYzMzM2/best-split-spells-mtg.jpg" alt="Repudiate/Replicate, Instant/Sorcery" class="rounded" class="img-fluid" style="width:550px; height:400px;">
       </div>
     </div>
   </div>
