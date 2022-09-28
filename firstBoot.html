@@ -6,33 +6,32 @@
   <title>ℑᗩᏨЌ ℋ₳尺Ꮙ∑ϒ: MTG</title>
 
   <!-- Latest compiled CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Latest compiled JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid mt-3">
+  <div class="container-fluid">
     <br><h1 style="font-size:90px; border:5px #1F5857; background-color:#00CC73; outline-style:double; text-align:center;">Magic: The Gathering</h1>
         <p>A collectible card game<br>that is much better<br>than <sup>any</sup> other<sub>you think you've played</sub>.</p>
       <hr>
 
     <ul class="nav nav-pills">
-      <li class="active">
-        <a data-toggle="pill" data-bs-toggle="tooltip" title="starting page thingy" href="#home">Home</a>
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill"  title="starting page thingy" href="#home">Home</a>
       </li>
-      <li>
-        <a data-toggle="pill" data-bs-toggle="tooltip" title="the next one" href="#intro">An Intro</a>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" title="the next one" href="#intro">An Intro</a>
       </li>
-      <li>
-        <a data-toggle="pill" data-bs-toggle="tooltip" title="you're going pretty far over here" href="#start">Getting Started</a>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" title="you're going pretty far over here" href="#start">Getting Started</a>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" role="button" data-bs-toggle="tooltip" title="ohwaituptheresmore" data-toggle="dropdown">Dropend</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="ohwaituptheresmore" role="button">Dropend</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" data-toggle="pill" data-bs-toggle="tooltip" title="this is the end..." href="#media">Media</a></li>
-          <li><a class="dropdown-item" data-toggle="pill" data-bs-toggle="tooltip" title="or is it?" href="#conclude">Wrap-Up</a></li>
+          <li><a class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right" title="this is the end..." href="#media">Media</a></li>
+          <li><a class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right" title="or is it?" href="#conclude">Wrap-Up</a></li>
         </ul>
       </li>
     </ul>
@@ -46,7 +45,7 @@
     </script>
 
     <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
+      <div id="home" class="tab-pane fade active">
         <p>nice</p>
       </div>
       <div id="intro" class="tab-pane fade">
