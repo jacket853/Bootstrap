@@ -27,22 +27,14 @@
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="pill" title="you're going pretty far over here" href="#start">Getting Started</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown dropend">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="ohwaituptheresmore" role="button">Dropend</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right" title="this is the end..." href="#media">Media</a></li>
-          <li><a class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right" title="or is it?" href="#conclude">Wrap-Up</a></li>
+          <li><a class="dropdown-item" data-bs-toggle="pill" title="this is the end..." href="#media">Media</a></li>
+          <li><a class="dropdown-item" data-bs-toggle="pill" title="or is it?" href="#conclude">Wrap-up</a></li>
         </ul>
       </li>
     </ul>
-
-    <script>
-    // initialize tooltips
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-    </script>
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade active">
