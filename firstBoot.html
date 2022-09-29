@@ -17,30 +17,34 @@
         <p>A collectible card game<br>that is much better<br>than <sup>any</sup> other<sub>you think you've played</sub>.</p>
       <hr>
 
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="pill"  title="starting page thingy" href="#home">Home</a>
+    <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" title="starting page thingy">Home</button>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" title="the next one" href="#intro">An Intro</a>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-intro-tab" data-bs-toggle="pill" data-bs-target="#pills-intro" type="button" role="tab" aria-controls="pills-intro" aria-selected="false" title="the next one">An Intro</button>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" title="you're going pretty far over here" href="#start">Getting Started</a>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-start-tab" data-bs-toggle="pill" data-bs-target="#pills-start" type="button" role="tab" aria-controls="pills-start" aria-selected="false" title="you're going pretty far over here">Getting Started</button>
       </li>
-      <li class="nav-item dropdown dropend">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="ohwaituptheresmore" role="button">Dropend</a>
+      <li class="nav-item dropdown" role="presentation">
+        <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="ohwaituptheresmore" role="button">dropdown</button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" data-bs-toggle="pill" title="this is the end..." href="#media">Media</a></li>
-          <li><a class="dropdown-item" data-bs-toggle="pill" title="or is it?" href="#conclude">Wrap-up</a></li>
+          <li><a class="dropdown-item" class="nav-link" id="pills-media-tab" data-bs-toggle="pill" data-bs-target="#pills-media" type="button" role="tab" aria-controls="pills-media" aria-selected="false" title="this is the end...">Media</a></li>
+          <li><a class="dropdown-item" class="nav-link" id="pills-finish-tab" data-bs-toggle="pill" data-bs-target="#pills-finish" type="button" role="tab" aria-controls="pills-finish" aria-selected="false" title="or is it?">Wrap-up</a></li>
         </ul>
       </li>
     </ul>
 
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade active">
-        <p>nice</p>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <h3>This is all the animated stuff</h3>
+        <button class="btn btn-dark">
+          <span class="spinner-border spinner-border-sm"></span>
+          thingy
+        </button>
       </div>
-      <div id="intro" class="tab-pane fade">
+      <div class="tab-pane fade" id="pills-intro" role="tabpanel" aria-labelledby="pills-intro-tab">
         <h2>A Haiku About Magic</h2>
             <pre>
               An eternal choice
@@ -57,7 +61,7 @@
               <div class="col-2 col-sm-12 col-md-6 col-lg-6 bg-dark text-white"><p>Here's what CBR.com (media commentary website) had to say:<br><blockquote cite="https://www.cbr.com/magic-gathering-mtg-black-lotuses-remaining/"><em>In Magic: The Gathering, there is a set of cards known as the Power Nine. These are considered to be the most powerful from M:TG's original print run, making them incredibly valuable to collectors. However, none of the Power Nine cards are as valuable as the Black Lotus card. In fact, the card's legendary status has lead to it being banned in almost every form of competitive play.</em></blockquote></p></div>
             </div>
       </div>
-      <div id="start" class="tab-pane fade">
+      <div class="tab-pane fade" id="pills-start" role="tabpanel" aria-labelledby="pills-start-tab">
         <h2>Are You Ready to Play?</h2>
             <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
             <div class="row">
@@ -101,9 +105,9 @@
               </div>
             </div>
       </div>
-      <div id="media" class="tab-pane fade">
+      <div class="tab-pane fade" id="pills-media" role="tabpanel" aria-labelledby="pills-media-tab">
         <h2>Let's do things with Magic! ... But what?</h2>
-          <a href="#Cards">Skip the match. It's ONLY the world finals or something.<br>></a>
+          <a href="#Cards">Skip the match. It's ONLY the world finals or something.<br></a>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/2dgyHsW9LtM?start=60&autoplay=1&mute=1&controls=0" title="Not boring..."></iframe>
               <!-- have to mute embedded video or will not autoplay in chrome, firefox, or edge -->
           <h3 id="Cards" style="color:red;">Wait! Where did that card art go?</h3>
@@ -111,7 +115,7 @@
           <!-- original 1504x1052 -->
             <img src="https://i.pinimg.com/originals/1d/6e/2e/1d6e2e9ea677e545bb30edfdd3fc421b.jpg" alt="Omniscience/Enter the Infinite" style="width:100vw;">
       </div>
-      <div id="conclude" class="tab-pane fade">
+      <div class="tab-pane fade" id="pills-finish" role="tabpanel" aria-labelledby="pills-finish-tab">
         <h3>Finally...</h3>
         <p>this is a page that has no grammar or maybeisnt <br> happywith the way peopletalk maybe we don'tneed grammar<br> e<br>ecummings waslike nahi<br>mgood!@#$%^*() and what about MTG maybe you can play it in your headwithoutcards likechessplayersdo with theireyesclosed but thatsalot of cards to remember</p>
         <h1><strong>ANYWAY THANK YOU FOR LOOKING AT MY WEBSITE</strong></h1>
