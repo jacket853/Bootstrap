@@ -38,11 +38,40 @@
 
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-        <h3>This is all the animated stuff</h3>
-        <button class="btn btn-dark">
-          <span class="spinner-border spinner-border-sm"></span>
-          thingy
-        </button>
+        <br>
+        <div class="row">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:30%;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:45%;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:5%;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:20%;"></div>
+          </div>
+          <!-- progress bar above, spinner/toast button below -->
+          <button type="button" class="btn btn-dark" id="toastbtn">
+            <span class="spinner-border text-danger"></span>
+             Your knowledge will be expanding soon... I think you should click on me! <span class="badge bg-danger"><span class="spinner-grow text-warning"></span></span>
+          </button>
+          <div class="toast">
+            <div class="toast-header">
+              <strong class="me-auto">This is what's called a "toast."</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+              <p>text</p>
+            </div>
+          </div>
+          <!-- JS for action onclick toast -->
+          <script>
+            document.getElementById("toastbtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show())
+            }
+          </script>
+
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-intro" role="tabpanel" aria-labelledby="pills-intro-tab">
         <h2>A Haiku About Magic</h2>
@@ -108,15 +137,15 @@
       <div class="tab-pane fade" id="pills-media" role="tabpanel" aria-labelledby="pills-media-tab">
         <h2>Let's do things with Magic! ... But what?</h2>
           <a href="#Cards">Skip the match. It's ONLY the world finals or something.<br></a>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2dgyHsW9LtM?start=60&autoplay=1&mute=1&controls=0" title="Not boring..."></iframe>
+            <iframe src="https://www.youtube.com/embed/2dgyHsW9LtM?start=60&autoplay=1&mute=1&controls=0" width="600" height="355"></iframe>
               <!-- have to mute embedded video or will not autoplay in chrome, firefox, or edge -->
           <h3 id="Cards" style="color:red;">Wait! Where did that card art go?</h3>
           <p>Here's my favorite card art from the game</p>
           <!-- original 1504x1052 -->
-            <img src="https://i.pinimg.com/originals/1d/6e/2e/1d6e2e9ea677e545bb30edfdd3fc421b.jpg" alt="Omniscience/Enter the Infinite" style="width:100vw;">
+            <img src="https://i.pinimg.com/originals/1d/6e/2e/1d6e2e9ea677e545bb30edfdd3fc421b.jpg" alt="Omniscience/Enter the Infinite" class="img-fluid">
       </div>
       <div class="tab-pane fade" id="pills-finish" role="tabpanel" aria-labelledby="pills-finish-tab">
-        <h3>Finally...</h3>
+        <h3 class="mx-auto">Finally...</h3>
         <p>this is a page that has no grammar or maybeisnt <br> happywith the way peopletalk maybe we don'tneed grammar<br> e<br>ecummings waslike nahi<br>mgood!@#$%^*() and what about MTG maybe you can play it in your headwithoutcards likechessplayersdo with theireyesclosed but thatsalot of cards to remember</p>
         <h1><strong>ANYWAY THANK YOU FOR LOOKING AT MY WEBSITE</strong></h1>
       </div>
