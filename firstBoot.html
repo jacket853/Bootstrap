@@ -57,7 +57,36 @@
               <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
             </div>
             <div class="toast-body">
-              <p>text</p>
+              <!-- carousel in toast -->
+              <div id="show" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#show" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#show" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#show" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- image slideshow layout -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.obilisk.co/wp-content/uploads/2017/10/960.jpg" alt="A lot of people playing" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://magic.wizards.com/sites/mtg/files/spineback.jpg" alt="MTG Arena" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/R.9a4c7e79cb9549e6e17c29abe7e4aac4?rik=gr%2bNHYhYFWL5%2fQ&riu=http%3a%2f%2fwww.artofmtg.com%2fwp-content%2fuploads%2f2015%2f06%2fMountain-Magic-Origins-MtG-Art.jpg&ehk=izfuUIp0gW%2frLx1XaSfuW6CdP4EfXiS6EZgfNbBYhBE%3d&risl=&pid=ImgRaw&r=0" alt="Some cool art" class="d-block" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- control icons for previous and next -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#show" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#show" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
             </div>
           </div>
           <!-- JS for action onclick toast -->
